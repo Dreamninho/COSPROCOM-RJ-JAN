@@ -139,7 +139,7 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:12.5px;border
       <div class="eyebrow">บริการวิชาการ</div>
       <h1>โครงการพัฒนาเครื่องสำอางชุมชนต้นแบบอย่างยั่งยืน</h1>
       <p class="subline" id="cosprocomLine" style="white-space:nowrap;text-align:left;display:inline-block;transform-origin:left center;">Development of Cosmetic Prototype Community (COSPROCOM)</p>
-      <p>โครงการขับเคลื่อนงานวิจัยและบริการวิชาการจาก Local สู่ Global เปลี่ยนศักยภาพพืชพรรณท้องถิ่นให้เป็นตำรับเครื่องสำอางที่มีคุณภาพ ปลอดภัย และแข่งขันได้<span style="white-space:nowrap;">ในตลาด</span></p>
+      <p>โครงการขับเคลื่อนงานวิจัยและบริการวิชาการจาก Local สู่ Global<br><span id="heroLine2" style="white-space:nowrap;display:inline-block;transform-origin:left center;">เปลี่ยนศักยภาพพืชพรรณท้องถิ่นให้เป็นตำรับเครื่องสำอางที่มีคุณภาพ ปลอดภัย และแข่งขันได้ในตลาด</span></p>
     </div>
   </header>
 
@@ -377,8 +377,8 @@ document.addEventListener('keydown', function(e){
   if(e.key === 'Escape') closeBook();
 });
 
-function fitCosprocomLine(){
-  var el = document.getElementById('cosprocomLine');
+function fitLineToWidth(id){
+  var el = document.getElementById(id);
   if(!el) return;
   el.style.transform = 'scale(1)';
   var available = el.parentElement.clientWidth;
@@ -387,8 +387,12 @@ function fitCosprocomLine(){
     el.style.transform = 'scale(' + (available/needed) + ')';
   }
 }
-fitCosprocomLine();
-window.addEventListener('resize', fitCosprocomLine);
+function fitAllLines(){
+  fitLineToWidth('cosprocomLine');
+  fitLineToWidth('heroLine2');
+}
+fitAllLines();
+window.addEventListener('resize', fitAllLines);
 
 </script>
 

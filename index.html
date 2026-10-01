@@ -31,6 +31,10 @@ img{max-width:100%;display:block;}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
 @media (max-width:600px){
   .wrap{padding:0 32px;}
+  .hero-wrap{padding-left:18px !important;padding-right:18px !important;}
+}
+@media (max-width:900px){
+  .rationale-wrap{padding-left:40px !important;padding-right:40px !important;}
 }
 .overflow-x{overflow-x:auto;}
 
@@ -49,7 +53,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-
 .eyebrow{display:inline-block;font-size:15px;font-weight:700;color:var(--pink);padding:0 0 8px;margin-bottom:18px;border-bottom:3px solid var(--pink);}
 .eyebrow.on-light{background:var(--pink-soft);color:#9d1856;border-bottom:none;padding:6px 16px;border-radius:8px;}
 .hero h1{font-size:clamp(24px,3.6vw,36px);font-weight:700;margin:0 0 18px;line-height:1.35;}
-.hero .subline{font-size:clamp(12px,3.4vw,28px);font-weight:600;color:#fff;margin:0 0 12px;line-height:1.4;}
+.hero .subline{font-size:clamp(12px,3.4vw,28px);font-weight:600;color:#fff;margin:0 0 24px;line-height:1.4;}
 @media (max-width:900px){
   #cosprocomLine, #heroLine2{white-space:normal !important;transform:none !important;display:inline !important;}
 }
@@ -144,7 +148,7 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:12.5px;border
 <div id="home">
   <header class="hero">
     <svg class="deco" viewBox="0 0 800 400" preserveAspectRatio="none"><path d="M-20 380 C 150 300, 250 340, 420 260 S 700 120, 830 60" stroke="#ff8fc4" stroke-width="2" fill="none" opacity=".5"/><path d="M-20 340 C 180 260, 260 300, 440 220 S 720 90, 830 20" stroke="#c9a24b" stroke-width="1.5" fill="none" opacity=".4"/></svg>
-    <div class="wrap">
+    <div class="wrap hero-wrap">
       <div class="eyebrow">บริการวิชาการ</div>
       <h1>โครงการพัฒนาเครื่องสำอางชุมชนต้นแบบอย่างยั่งยืน</h1>
       <p class="subline" id="cosprocomLine" style="white-space:nowrap;text-align:left;display:inline-block;transform-origin:left center;">Development of Cosmetic Prototype Community (COSPROCOM)</p>
@@ -152,7 +156,7 @@ footer{padding:28px 0;text-align:center;color:var(--sub);font-size:12.5px;border
     </div>
   </header>
 
-  <section class="section wrap" style="padding-top:76px;">
+  <section class="section wrap rationale-wrap" style="padding-top:76px;">
     <div class="rationale-grid">
       <div>
         <div class="eyebrow" style="display:inline-block;font-size:13px;font-weight:600;color:var(--green-500);border:1px solid var(--line);border-bottom:1px solid var(--line);padding:5px 14px;border-radius:999px;margin-bottom:18px;">เกี่ยวกับโครงการ</div>
